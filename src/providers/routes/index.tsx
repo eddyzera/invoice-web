@@ -1,15 +1,17 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import { Dashboard } from '@/pages/app/dashboard'
 import { SignIn } from '@/pages/auth/signIn'
 import { SignUp } from '@/pages/auth/signUp'
+import { AppLayoutProvider } from '@/providers/layout/app'
 import { AuthLayoutProvider } from '@/providers/layout/auth'
 
 const router = createBrowserRouter([
-  // {
-  //   path: '/',
-  //   element: <AppLayout />,
-  //   children: [{ path: '/', element: <Dashboard /> }],
-  // },
+  {
+    path: '/',
+    element: <AppLayoutProvider />,
+    children: [{ path: '/', element: <Dashboard /> }],
+  },
 
   {
     path: '/',
