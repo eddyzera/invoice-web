@@ -11,7 +11,7 @@ export const Header: React.FunctionComponent = () => {
       <div className="flex h-16 items-center gap-6 p-6">
         <Landmark className="h-6 w-6" />
         <Separator orientation="vertical" className="h-6" />
-        <h1>Invoice Web</h1>
+        <h1 className='text-muted-foreground'>Invoice Web</h1>
         <div className="flex-1 justify-end w-full flex items-center gap-3">
           <ThemeToggle />
           <Button>New Invoice</Button>
