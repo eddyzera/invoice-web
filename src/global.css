@@ -56,4 +56,66 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .paid-bg {
+    @apply 
+  }
+
+  .paid-status {
+    @apply bg-emerald-600
+  }
+
+  .paid-text {
+    @apply text-emerald-600
+  }
+}
+
+@layer components {
+  .paid {
+    @apply bg-emerald-100
+  }
+
+  .paid span {
+    @apply bg-emerald-600
+  }
+
+  .paid p {
+    @apply text-emerald-600
+  }
+
+  .pending {
+    @apply bg-yellow-100
+  }
+
+  .pending span {
+    @apply bg-yellow-600
+  }
+
+  .pending p {
+    @apply text-yellow-600
+  }
+
+  .late {
+    @apply bg-red-100
+  }
+
+  .late span {
+    @apply bg-red-600
+  }
+
+  .late p {
+    @apply text-red-600
+  }
+
+  .draft {
+    @apply bg-stone-100
+  }
+
+  .draft span {
+    @apply bg-stone-600
+  }
+
+  .draft p {
+    @apply text-stone-600
+  }
 }
