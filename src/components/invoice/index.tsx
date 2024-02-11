@@ -1,14 +1,15 @@
 import { ChevronRight } from 'lucide-react'
 import React from 'react'
+import { StatusType, Status } from '../status'
 
-type Status = 'paid' | 'pending' | 'draft' | 'late'
+
 
 interface IInvoiceProps {
   id: string
   date: string
   customer: string
   price: string
-  status: Status
+  status: StatusType
 }
 
 export const Invoice: React.FunctionComponent<IInvoiceProps> = ({
@@ -30,10 +31,7 @@ export const Invoice: React.FunctionComponent<IInvoiceProps> = ({
       </div>
       <div className='flex items-center justify-end gap-5'>
         <p className='text-muted-foreground font-bold'>{price}</p>
-        <div className={`flex items-center justify-center gap-2 p-3 ${status} rounded-md w-24`}>
-          <span className='w-2 h-2 block rounded-full'></span>
-          <p className='capitalize'>{status}</p>
-        </div>
+        <Status statusType={status}  />
         <ChevronRight />
       </div>
     </div>
