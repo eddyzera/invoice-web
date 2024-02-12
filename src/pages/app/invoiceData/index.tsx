@@ -1,15 +1,32 @@
+import { useNavigate } from 'react-router-dom'
 import { Status } from '@/components/status'
 import { Button } from '@/components/ui/button'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, TableFooter } from '@/components/ui/table'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+  TableFooter
+} from '@/components/ui/table'
 import { ChevronLeft } from 'lucide-react'
 import React from 'react'
 
 export const InvoiceData: React.FunctionComponent = () => {
+
+  const navigate = useNavigate()
+
+  const handleGoBack = () => {
+    console.log('foi')
+    navigate('/')
+  }
+
   return (
     <div className='flex items-center flex-col gap-4 justify-center pt-8 max-w-4xl m-auto'>
       <div className='flex items-start justify-start w-full'>
         <div className='flex items-center cursor-pointer py-8'>
-          <Button variant={'ghost'} className='flex items-center capitalize'>
+          <Button variant={'ghost'} className='flex items-center capitalize' onClick={() => handleGoBack()}>
             <ChevronLeft />
             go back
           </Button>
